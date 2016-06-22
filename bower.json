@@ -1,0 +1,17 @@
+{
+  "name": "V-project",
+  "description": "blank start template with jade/sass/gulp",
+  "authors": [
+    "Vitalij Khomenko <homenkovit@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "dev/plugins"
+  ],
+  "dependencies": {
+    "normalize-css": "^4.1.1",
+    "jquery": "^3.0.0"
+  }
+}

@@ -1,0 +1,75 @@
+.about
+  width: 100%
+  min-height: height("about-bg.jpg")
+  background-image: resolve("about-bg.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  position: relative
+  color: #ffffff
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    width: 100%
+    height: 100%
+    background-color: #3b5c6c
+    opacity: 0.7
+  &_left
+    max-width: 700px
+    float: left
+  &__list
+    float: right
+    width: 302px
+    height: height("about-bg.jpg")
+    background-color: rgba(255, 255, 255, 0.4)
+    padding: 30px 80px
+    box-sizing: border-box
+  &__list, &__item
+    list-style: disc outside !important
+  &__link
+    color: #ffffff
+    text-transform: capitalize
+    font-family: "open_sansregular"
+    font-size: 14px
+    line-height: 26px
+
+.section
+  &__title
+    padding-top: 34px
+    font-family: "robotoregular"
+    font-size: 24px
+    text-transform: capitalize
+  &__text
+    @include inlineblock
+    padding: 18px 0
+    font-family: "open_sansregular"
+    font-size: 14px
+    line-height: 20px
+  &-btn
+    @include inlineblock
+    width: 123px
+    height: 36px
+    line-height: 36px
+    margin-bottom: 34px
+    background-color: #6ec996
+    color: #ffffff
+    font-family: "open_sansregular"
+    font-size: 15px
+    text-transform: capitalize
+    padding-left: 11px
+    position: relative
+    box-sizing: border-box
+    &:hover
+      color: #ffffff
+    &::after
+      position: absolute
+      top: 8px
+      right: 10px
+      content: ""
+      @include inlineblock
+      background-image: resolve("read-more-icon.png")
+      background-repeat: no-repeat
+      width: width("read-more-icon.png")
+      height: height("read-more-icon.png")

@@ -1,0 +1,105 @@
+.nav
+  min-height: 56px
+  line-height: 56px
+  background-color: #8fd0a9
+  border: 2px solid #ffffff
+  border-left: none
+  border-right: none
+  box-shadow: 0 2.2px 2px 0 rgba(0, 0, 0, 0.18)
+  &__item, &__link
+    @include inlineblock
+  &__link
+    padding: 0 10px
+    color: #ffffff
+    font-family: "robotoregular"
+    font-size: 17px
+    text-transform: uppercase
+    text-shadow: 1.5px 1.4px 2px rgba(0, 0, 0, 0.3)
+    &:hover, &_active
+      color: #ffffff
+      background-color: #5f7a87
+  &__item
+    position: relative
+  &__dropdown
+    display: none
+    z-index: 999
+    position: absolute
+    top: 62px
+    left: 3px
+    box-sizing: border-box
+    min-width: 600px
+    min-height: 278px
+    padding: 50px 0 40px 
+    background-color: #5f7a87
+    box-shadow: 0 0 0 6px rgba(75, 101, 113, 0.4)
+
+.dropdown
+  &__list
+    @include inlineblock
+    margin-left: 26px
+    text-transform: capitalize
+    font-family: "open_sansregular"
+  &__item
+    line-height: 26px
+    &:first-child
+      color: #8ecea8
+      font-size: 16px
+      line-height: 36px
+      border-bottom: 1px solid #445e6a
+      box-shadow: 0 1px 0 0 #7497a8
+      margin-bottom: 10px
+      margin-left: 10px
+      width: 146px
+  &__link
+    color: #ffffff
+    font-size: 13px
+    @include inlineblock
+    box-sizing: border-box
+    width: 156px
+    height: 25px
+    line-height: 25px
+    padding-left: 20px
+    position: relative
+    &::before
+      content: ""
+      @include inlineblock
+      background-image: resolve("arrow-right.png")
+      width: width("arrow-right.png")
+      height: height("arrow-right.png")
+      position: absolute
+      top: 9px
+      left: 10px
+    &:hover
+      color: #2b4653
+      background-color: #8fd0a9
+      &::before
+        background-image: resolve("arrow-right_hover.png")
+  &__products
+    @include inlineblock
+    box-sizing: border-box
+    min-width: 175px
+    min-height: 180px
+    margin-left: 22px
+    margin-top: 10px
+    padding-top: 10px
+    padding-bottom: 5px
+    background-color: #ffffff
+    text-align: center
+    text-transform: capitalize
+    position: relative
+.products
+  &__title
+    color: #307392
+    font-family: Oswald
+    font-size: 18px
+    line-height: 24px
+  &__desc
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translateX(-50%)
+    color: #1f3540
+    font-family: "Segoe UI"
+    font-size: 14px
+    font-style: italic
+    line-height: 22px

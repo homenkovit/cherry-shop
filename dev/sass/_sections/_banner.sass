@@ -1,0 +1,34 @@
+.banner
+  width: 100%
+  margin-top: 3px
+  position: relative
+  background-image: resolve("main-banner.jpg")
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  height: height("main-banner.jpg")
+  & > .container
+    height: 100%
+  &__text-block
+    position: absolute
+    top: 50%
+    left: 58px
+    transform: translateY(-50%)
+    text-transform: uppercase
+    text-align: center
+    max-width: 500px
+    max-height: 100%
+  &__text
+    color: #6fb38a
+    font-family: "open_sansregular"
+    font-size: 30px
+    & > span
+      font-family: "open_sansbold"
+    &_center
+      color: #3b5c6c
+      font-family: PontanoSans
+      font-size: 28px
+      margin: 14px 0
+      border: 1px solid #d0d0d0
+      border-left: none
+      border-right: none

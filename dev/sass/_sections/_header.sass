@@ -1,0 +1,152 @@
+.header
+  &__top
+    @include clearfix
+    min-height: 46px
+    line-height: 46px
+    background-color: #f5f5f5
+    box-shadow: 0 2.2px 2px 0 rgba(0, 0, 0, 0.18)
+    font-family: "open_sansregular"
+    font-size: 13px
+    color: #8ea3ad 
+    li, li a
+      @include inlineblock
+    &_left
+      float: left
+      li
+        margin-left: 10px
+        &:first-child
+          margin-left: 0 
+        a
+          position: relative
+          padding-right: 24px
+          &::after
+            content: ""
+            position: absolute
+            top: 23px
+            right: 0
+            @include inlineblock
+            width: width("arrow-down.png")
+            height: height("arrow-down.png")
+            background-image: resolve("arrow-down.png")
+            background-repeat: no-repeat
+    &_right
+      float: right
+      li
+        margin-left: 20px
+        position: relative
+        &:first-child
+          margin-left: 0
+          &::before
+            display: none
+        &::before
+          content: ""
+          position: absolute
+          top: 14px
+          left: -10px
+          @include inlineblock
+          width: width("top-header-separate.png")
+          height: height("top-header-separate.png")
+          background-image: resolve("top-header-separate.png")
+          background-repeat: no-repeat
+  &__main
+    padding-bottom: 14px
+    &_left
+      float: left
+      padding-top: 38px
+    &_right
+      float: right
+      padding-top: 28px
+
+.logo
+  text-decoration: none
+  text-transform: uppercase
+  line-height: 21px
+  width: 195px
+  height: 44px
+  &__brand
+    font-family: "glegooregular"
+    font-size: 32px
+    color: #3b5c6c
+    & > span
+      font-family: "concert_oneregular"
+  &__sub
+    color: #90c7a6
+    font-family: Tahoma
+    font-size: 14px
+    letter-spacing: 2.5px
+    text-align: right
+    padding-top: 5px
+
+.form_search
+  margin-bottom: 12px
+  text-align: right
+  input[type="search"]
+    @include inlineblock
+    width: 262px
+    height: 34px
+    background-color: #f5f5f5
+    border: 1px solid #e7e7e7
+    color: #7e939e
+    font-family: "open_sansregular"
+    font-size: 13px
+    line-height: 21px
+    padding-left: 11px
+    outline: none
+  input[type="submit"]
+    @include inlineblock
+    width: 45px
+    height: 34px
+    background-color: #ededed
+    border: 1px solid #e7e7e7
+    padding: 0
+    background-image: resolve("search-btn.png")
+    background-repeat: no-repeat
+    background-position: center center
+    cursor: pointer
+
+.account-list
+  @include inlineblock
+  height: 36px
+  line-height: 36px
+  li, li a
+    @include inlineblock
+  li
+    margin-left: 20px
+    position: relative
+    &:first-child
+      margin-left: 0
+      &::before
+        display: none
+    &::before
+      content: ""
+      position: absolute
+      top: 9px
+      left: -10px
+      @include inlineblock
+      width: width("top-header-separate.png")
+      height: height("top-header-separate.png")
+      background-image: resolve("top-header-separate.png")
+      background-repeat: no-repeat
+
+.cart
+  @include inlineblock
+  height: 36px
+  line-height: 36px
+  border-left: 1px solid #c8c8c8
+  padding-left: 54px
+  margin-left: 10px
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 1px
+    left: 0
+    @include inlineblock
+    width: 34px
+    height: 34px
+    background-color: #8fd0a9
+    border-radius: 50%
+    margin-left: 10px
+    background-image: resolve("cart.png")
+    background-repeat: no-repeat
+    background-position: center center
